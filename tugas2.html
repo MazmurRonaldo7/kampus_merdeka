@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas JQUERY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="p">
+        
+        <div class="elit">
+            <div class="ora_elit" id="gitar">
+                <span>Gitar</span>
+            </div>
+            <div class="ora_elit" id="drum">
+                <span>Drum</span>
+    
+            </div>
+            <div class="ora_elit" id="piano">
+                <span>Piano</span>
+    
+            </div>
+            <div class="ora_elit" id="violin">
+                <span>Violin</span>
+            </div>
+        </div>
+    </section>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            var song_gitar = document.createElement('audio');
+            song_gitar.setAttribute('src', 'audio/Guitar.mp3');
+
+            var song_drum = document.createElement('audio');
+            song_drum.setAttribute('src', 'audio/drum.mp3');
+
+            var song_piano = document.createElement('audio');
+            song_piano.setAttribute('src', 'audio/piano.mp3');
+
+            var song_violin = document.createElement('audio');
+            song_violin.setAttribute('src', 'audio/violin.mp3');
+
+
+            $('#gitar').click(function(){
+                $('#gitar').css("background","url(image/gitar.jpg)");
+                console.log('ditekan');
+                song_gitar.play();
+            });
+            $('#drum').click(function(){
+                $('#drum').css("background","url(image/drum.jpg)");
+                console.log('ditekan');
+                song_drum.play();
+            });
+            $('#piano').click(function(){
+                $('#piano').css("background","url(image/piano.jpg)");
+                console.log('ditekan');
+                song_piano.play();
+            });
+            $('#violin').click(function(){
+                $('#violin').css("background","url(image/violin.jpg)");
+                console.log('ditekan');
+                song_violin.play();
+            });
+            $('#a').click(function(){
+                $('#companyprofile').slideToggle();
+            });
+            $('#b').click(function(){
+                $('#visimisi').slideToggle();
+            });
+            $('#c').click(function(){
+                $('#deskripsi').slideToggle();
+            });
+
+        });
+    </script>
+</body>
+</html>
